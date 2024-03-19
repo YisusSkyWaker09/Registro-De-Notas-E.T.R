@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Notas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://i.pinimg.com/736x/df/bb/01/dfbb01d30bd95d84a5c27d3c7a80d2b8.jpg') no-repeat center center fixed; /* Reemplaza 'https://ejemplo.com/ruta_de_la_imagen.jpg' con la URL de tu imagen */
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            animation: fadeInOut 3s ease-in-out;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Agregamos opacidad al fondo blanco */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profesor-button {
+            padding: 10px;
+            background-color: #2a18cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 15px; /* Ajusta este valor según tu preferencia */
+        }
+
+        .profesor-button:hover {
+            filter: brightness(85%);
+        }
+
+        /* Nuevos estilos para estudiantes */
+        .estudiante-section {
+            color: #000000;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .estudiante-section h2 {
+            margin: 0;
+            font-weight: bold; /* Negrita */
+            margin-top: -10px; /* Mover un poco más arriba */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente igual a la del título principal */
+            margin-bottom: 10px; /* Ajusta este valor según tu preferencia */
+        }
+
+        .estudiante-button {
+            padding: 10px;
+            background-color: #00ff0d; /* Beige más oscuro */
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 10px; /* Ajusta este valor según tu preferencia */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente igual a la del título principal */
+        }
+
+        .estudiante-button:hover {
+            background-color: #250e79; /* Cambia el color al pasar el mouse */
+        }
+
+        /* Nuevos estilos para la sección principal */
+        .main-section {
+            text-align: center;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .main-section img {
+            width: 100px; /* Ajusta el tamaño de la imagen según tus preferencias */
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .main-section h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .main-section p {
+            font-family: sans-serif; /* Estilo de letra sans-serif */
+            font-weight: bold; /* Negrita */
+            margin-bottom: 10px; /* Ajusta este valor según tu preferencia */
+        }
+
+        @keyframes fadeInOut {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Complejo Educativo Gran Colombia</h1>
+    </header>
+
+    <div class="container">
+        <!-- Sección Principal con Imagen -->
+        <div class="main-section">
+            <h2>Bienvenido al Registro de Notas E.T.R</h2>
+        </div>
+
+        <!-- Botones para Profesores -->
+        <button class="profesor-button" onclick="fadePage('Registro%20Profesor.html')">Registrarse como Profesor</button>
+        <button class="profesor-button" onclick="fadePage('Inicio%20de%20Sesion%20Profesores.html')">Iniciar Sesión como Profesor</button>
+
+        <!-- Sección para Estudiantes -->
+        <div class="estudiante-section">
+            <h2>Ingresar Como Estudiante</h2>
+            <button class="estudiante-button" onclick="fadePage('Registro%20de%20Estudiantes.html')">Registrarse como Estudiante</button>
+            <button class="estudiante-button" onclick="fadePage('Inicio%20de%20Sesion%20Estudiante.html')">Iniciar Sesión como Estudiante</button>
+        </div>
+    </div>
+
+    <script>
+        // Función para desvanecer la página y redirigir después de la animación
+        function fadePage(destination) {
+            document.body.style.animation = "fadeOut 3s ease-in-out";
+            setTimeout(function () {
+                location.href = destination;
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
